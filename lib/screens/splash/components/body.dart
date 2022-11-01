@@ -1,3 +1,4 @@
+import 'package:fluter_intro_screen/screens/intro_screen/intro_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatefulWidget {
@@ -9,7 +10,23 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context)
+          .pushNamedAndRemoveUntil(IntroScreen.routeName, (route) => false);
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Image.asset(
+        'assets/images/logo.png',
+        width: 120,
+        height: 120,
+      ),
+    );
   }
 }

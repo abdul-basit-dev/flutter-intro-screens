@@ -1,9 +1,14 @@
+import 'package:fluter_intro_screen/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:fluter_intro_screen/routes.dart';
 import 'package:fluter_intro_screen/screens/splash/splash_screen.dart';
 import 'package:fluter_intro_screen/theme.dart';
+import 'package:flutter/services.dart';
 
-void main() {
+void main() async {
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: kPrimaryColor));
+
   runApp(const MyApp());
 }
 
