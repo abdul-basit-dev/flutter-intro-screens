@@ -1,4 +1,4 @@
-import 'package:fluter_intro_screen/screens/intro_screen/intro_screen.dart';
+import 'package:fluter_intro_screen/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatefulWidget {
@@ -15,7 +15,7 @@ class _BodyState extends State<Body> {
 
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context)
-          .pushNamedAndRemoveUntil(IntroScreen.routeName, (route) => false);
+          .pushNamedAndRemoveUntil(LoginScreen.routeName, (route) => false);
     });
   }
 
